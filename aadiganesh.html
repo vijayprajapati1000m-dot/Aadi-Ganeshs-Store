@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aadi Ganesh Store | Mulund West</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:#f7efdf;
+    color:#2c1b14;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:18px 7%;
+
+    background:rgba(247,239,223,.95);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(91,52,35,.15);
+}
+
+.logo{
+    font-family:"Cormorant Garamond",serif;
+    font-size:32px;
+    font-weight:700;
+    color:#5b3423;
+}
+
+.logo span{
+    color:#b7863d;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#4c3529;
+    font-size:14px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#a95334;
+}
+
+.nav-btn{
+    text-decoration:none;
+    background:#5b3423;
+    color:white;
+    padding:11px 20px;
+    border-radius:30px;
+    font-size:13px;
+}
+
+/* ================= COMMON ================= */
+
+section{
+    padding:100px 7%;
+}
+
+.small-title{
+    color:#a95334;
+    letter-spacing:4px;
+    font-size:12px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+h1,h2,h3{
+    font-family:"Cormorant Garamond",serif;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:14px 27px;
+    border-radius:30px;
+    background:#5b3423;
+    color:white;
+    transition:.35s;
+}
+
+.btn:hover{
+    background:#b7863d;
+    transform:translateY(-4px);
+}
+
+.outline{
+    display:inline-block;
+    text-decoration:none;
+    padding:13px 26px;
+    border:1px solid #5b3423;
+    border-radius:30px;
+    color:#5b3423;
+    transition:.35s;
+}
+
+.outline:hover{
+    background:#5b3423;
+    color:white;
+}
+
+/* ================= HOME ================= */
+
+.hero{
+    min-height:88vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:50px;
+}
+
+.hero-content{
+    max-width:620px;
+}
+
+.hero h1{
+    font-size:clamp(60px,8vw,110px);
+    line-height:.85;
+    color:#5b3423;
+}
+
+.hero h1 span{
+    color:#b7863d;
+    font-style:italic;
+}
+
+.hero p{
+    margin:30px 0;
+    max-width:520px;
+    line-height:1.9;
+    color:#745c4e;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* ================= 3D STORE ================= */
+
+.scene{
+    width:380px;
+    height:380px;
+
+    perspective:900px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.cube{
+    width:230px;
+    height:230px;
+
+    position:relative;
+
+    transform-style:preserve-3d;
+
+    animation:rotateCube 12s infinite linear;
+}
+
+.face{
+    position:absolute;
+
+    width:230px;
+    height:230px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:28px;
+    font-weight:700;
+
+    border:3px solid #5b3423;
+
+    background:linear-gradient(145deg,#cf8a5d,#8d442d);
+
+    box-shadow:inset 0 0 40px rgba(0,0,0,.15);
+}
+
+.front{
+    transform:translateZ(115px);
+}
+
+.back{
+    transform:rotateY(180deg) translateZ(115px);
+}
+
+.right{
+    transform:rotateY(90deg) translateZ(115px);
+}
+
+.left{
+    transform:rotateY(-90deg) translateZ(115px);
+}
+
+.top{
+    transform:rotateX(90deg) translateZ(115px);
+}
+
+.bottom{
+    transform:rotateX(-90deg) translateZ(115px);
+}
+
+@keyframes rotateCube{
+
+    0%{
+        transform:rotateX(0) rotateY(0);
+    }
+
+    50%{
+        transform:rotateX(15deg) rotateY(180deg);
+    }
+
+    100%{
+        transform:rotateX(0) rotateY(360deg);
+    }
+
+}
+
+/* ================= INTRO ================= */
+
+.center-title{
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:60px;
+}
+
+.center-title h2{
+    font-size:58px;
+    color:#5b3423;
+}
+
+.center-title p{
+    color:#786053;
+    margin-top:10px;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#fffaf0;
+
+    padding:40px 30px;
+
+    border:1px solid #dfcfb6;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px) rotateX(4deg);
+
+    box-shadow:
+        0 20px 40px rgba(72,43,30,.15);
+}
+
+.icon{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    font-size:32px;
+    color:#5b3423;
+}
+
+.card p{
+    color:#786053;
+    line-height:1.8;
+    margin-top:12px;
+}
+
+/* ================= COLLECTION ================= */
+
+.collection{
+    background:#eee2cc;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.product{
+    overflow:hidden;
+
+    border-radius:22px;
+
+    background:#fffaf0;
+
+    transition:.4s;
+}
+
+.product:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(70,40,25,.15);
+}
+
+.product-image{
+    height:300px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:90px;
+
+    background:
+        radial-gradient(circle at 30% 30%,#e2bd8d,transparent 25%),
+        linear-gradient(135deg,#a95738,#d3a16f);
+}
+
+.product-info{
+    padding:25px;
+}
+
+.product-info h3{
+    font-size:30px;
+    color:#5b3423;
+}
+
+.product-info p{
+    color:#786053;
+    margin-top:7px;
+}
+
+/* ================= STORY ================= */
+
+.story{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:70px;
+}
+
+.story-art{
+    min-height:450px;
+
+    border-radius:35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:160px;
+
+    background:
+        radial-gradient(circle at 30% 30%,#dba275,transparent 25%),
+        radial-gradient(circle at 70% 70%,#7f3d2a,transparent 35%),
+        #a95a3b;
+
+    box-shadow:inset 0 0 100px rgba(0,0,0,.2);
+}
+
+.story-text h2{
+    font-size:65px;
+    line-height:.95;
+    color:#5b3423;
+}
+
+.story-text p{
+    color:#755c4d;
+    line-height:1.9;
+    margin:20px 0;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.gallery-box{
+    height:280px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:20px;
+
+    font-size:75px;
+
+    background:linear-gradient(135deg,#a95738,#dfbd91);
+
+    transition:.4s;
+}
+
+.gallery-box:nth-child(even){
+    background:linear-gradient(135deg,#80503b,#d8b586);
+}
+
+.gallery-box:hover{
+    transform:scale(1.04) rotate(1deg);
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#eee2cc;
+}
+
+.contact-box{
+    max-width:850px;
+    margin:auto;
+
+    text-align:center;
+
+    padding:70px 40px;
+
+    background:#fffaf0;
+
+    border-radius:35px;
+
+    border:1px solid #dfcfb6;
+}
+
+.contact-box h2{
+    font-size:70px;
+    color:#5b3423;
+}
+
+.contact-box p{
+    color:#745c4e;
+    line-height:1.8;
+    margin:15px 0;
+}
+
+.phone{
+    display:inline-block;
+
+    font-size:28px;
+
+    color:#a95334;
+
+    font-weight:600;
+
+    margin:20px 0;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:55px 7%;
+
+    text-align:center;
+
+    background:#241711;
+
+    color:#eadcc7;
+}
+
+footer h2{
+    font-size:40px;
+}
+
+footer p{
+    color:#bda996;
+    margin-top:10px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:70px;
+    }
+
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .scene{
+        transform:scale(.75);
+    }
+
+    .cards,
+    .products,
+    .story{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .center-title h2,
+    .story-text h2{
+        font-size:48px;
+    }
+
+    .contact-box h2{
+        font-size:48px;
+    }
+}
+
+@media(max-width:500px){
+
+    section{
+        padding:70px 5%;
+    }
+
+    .hero h1{
+        font-size:65px;
+    }
+
+    .gallery-box{
+        height:200px;
+    }
+
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- =====================================================
+                    NAVIGATION
+===================================================== -->
+
+<nav>
+
+    <a href="#home" class="logo">
+        Aadi <span>Ganesh</span>
+    </a>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <a href="#contact" class="nav-btn">
+        Visit Us
+    </a>
+
+</nav>
+
+
+<!-- =====================================================
+                       HOME
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            Mulund West • Mumbai
+        </div>
+
+        <h1>
+            Tradition
+            <span>in every</span>
+            thread.
+        </h1>
+
+        <p>
+            Welcome to Aadi Ganesh Store — your destination
+            for beautiful traditional South Indian clothing,
+            festive fashion and timeless Indian style.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#collections" class="btn">
+                Explore Collection
+            </a>
+
+            <a href="#contact" class="outline">
+                Contact Store
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- 3D STORE -->
+
+    <div class="scene">
+
+        <div class="cube">
+
+            <div class="face front">
+                AADI<br>GANESH
+            </div>
+
+            <div class="face back">
+                TRADITION
+            </div>
+
+            <div class="face right">
+                STYLE
+            </div>
+
+            <div class="face left">
+                CULTURE
+            </div>
+
+            <div class="face top">
+                ॐ
+            </div>
+
+            <div class="face bottom">
+                AG
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                    SERVICES
+===================================================== -->
+
+<section>
+
+    <div class="center-title">
+
+        <div class="small-title">
+            Aadi Ganesh Store
+        </div>
+
+        <h2>
+            Wear Your Heritage
+        </h2>
+
+        <p>
+            Traditional fashion with a modern aesthetic.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🥻</div>
+
+            <h3>
+                Women's Wear
+            </h3>
+
+            <p>
+                Elegant sarees and beautiful traditional
+                South Indian styles for every occasion.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">👔</div>
+
+            <h3>
+                Men's Wear
+            </h3>
+
+            <p>
+                Classic traditional clothing inspired by
+                South Indian culture and celebrations.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">✨</div>
+
+            <h3>
+                Festive Wear
+            </h3>
+
+            <p>
+                Special traditional looks for weddings,
+                festivals and memorable occasions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                    COLLECTIONS
+===================================================== -->
+
+<section class="collection" id="collections">
+
+    <div class="center-title">
+
+        <div class="small-title">
+            Our Collection
+        </div>
+
+        <h2>
+            Traditional Styles
+        </h2>
+
+        <p>
+            Discover the beauty of South Indian fashion.
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <div class="product">
+
+            <div class="product-image">
+                🥻
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Silk Sarees
+                </h3>
+
+                <p>
+                    Elegant traditional silk styles.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">
+                🌸
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Traditional Sarees
+                </h3>
+
+                <p>
+                    Beautiful festive collections.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">
+                👔
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Men's Traditional
+                </h3>
+
+                <p>
+                    Classic South Indian looks.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">
+                ✨
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Wedding Wear
+                </h3>
+
+                <p>
+                    Special styles for special days.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">
+                🌿
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Cotton Collection
+                </h3>
+
+                <p>
+                    Comfortable traditional clothing.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">
+                🪷
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Festive Collection
+                </h3>
+
+                <p>
+                    Celebrate in traditional style.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                     OUR STORY
+===================================================== -->
+
+<section id="story">
+
+    <div class="story">
+
+        <div class="story-art">
+            🪷
+        </div>
+
+
+        <div class="story-text">
+
+            <div class="small-title">
+                Our Story
+            </div>
+
+            <h2>
+                Where culture
+                meets style.
+            </h2>
+
+            <p>
+                Aadi Ganesh Store brings the beauty of
+                traditional South Indian clothing to
+                Mulund West, Mumbai.
+            </p>
+
+            <p>
+                Our collection celebrates Indian heritage,
+                festive celebrations and the timeless
+                elegance of traditional clothing.
+            </p>
+
+            <p>
+                From everyday traditional styles to special
+                wedding and festive looks, we celebrate the
+                beauty of Indian culture.
+            </p>
+
+            <a href="#contact" class="btn">
+                Visit Our Store
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                       GALLERY
+===================================================== -->
+
+<section id="gallery" class="collection">
+
+    <div class="center-title">
+
+        <div class="small-title">
+            Gallery
+        </div>
+
+        <h2>
+            A Glimpse of Tradition
+        </h2>
+
+        <p>
+            Replace these placeholders with your actual
+            store and product photographs.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-box">
+            🥻
+        </div>
+
+        <div class="gallery-box">
+            🌸
+        </div>
+
+        <div class="gallery-box">
+            👔
+        </div>
+
+        <div class="gallery-box">
+            🪷
+        </div>
+
+        <div class="gallery-box">
+            ✨
+        </div>
+
+        <div class="gallery-box">
+            🌿
+        </div>
+
+        <div class="gallery-box">
+            🏛️
+        </div>
+
+        <div class="gallery-box">
+            🧵
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                       CONTACT
+===================================================== -->
+
+<section class="contact" id="contact">
+
+    <div class="contact-box">
+
+        <div class="small-title">
+            Get In Touch
+        </div>
+
+        <h2>
+            Visit Aadi Ganesh
+        </h2>
+
+        <p>
+            Come and explore our traditional South Indian
+            clothing collection.
+        </p>
+
+        <p>
+            📍 Mulund West, Mumbai
+        </p>
+
+        <div class="phone">
+            📞 09321668830
+        </div>
+
+        <br>
+
+        <a
+            href="tel:09321668830"
+            class="btn">
+            Call Store
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+                       FOOTER
+===================================================== -->
+
+<footer>
+
+    <h2>
+        Aadi Ganesh Store
+    </h2>
+
+    <p>
+        Traditional South Indian Clothing
+    </p>
+
+    <p>
+        Mulund West • Mumbai
+    </p>
+
+    <p>
+        © 2026 Aadi Ganesh Store
+    </p>
+
+</footer>
+
+</body>
+</html>
